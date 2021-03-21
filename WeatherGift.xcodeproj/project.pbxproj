@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		607031B06637A56BE6F2873E /* libPods-WeatherGift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1029AD70438E084C33A54B2 /* libPods-WeatherGift.a */; };
-		699949652606E6B300E947F6 /* APIkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699949642606E6B300E947F6 /* APIkeys.swift */; };
 		69AADFF026015CAD005C81EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AADFEF26015CAD005C81EA /* AppDelegate.swift */; };
 		69AADFF226015CAD005C81EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AADFF126015CAD005C81EA /* SceneDelegate.swift */; };
 		69AADFF426015CAD005C81EA /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AADFF326015CAD005C81EA /* LocationListViewController.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		699949642606E6B300E947F6 /* APIkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkeys.swift; sourceTree = "<group>"; };
 		69AADFEC26015CAD005C81EA /* WeatherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AADFEF26015CAD005C81EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AADFF126015CAD005C81EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 				69AADFF826015CAE005C81EA /* Assets.xcassets */,
 				69AADFFA26015CAE005C81EA /* LaunchScreen.storyboard */,
 				69AADFFD26015CAE005C81EA /* Info.plist */,
-				699949642606E6B300E947F6 /* APIkeys.swift */,
 			);
 			path = WeatherGift;
 			sourceTree = "<group>";
@@ -213,7 +210,6 @@
 			files = (
 				69AADFF426015CAD005C81EA /* LocationListViewController.swift in Sources */,
 				69AAE00526015CD3005C81EA /* WeatherLocation.swift in Sources */,
-				699949652606E6B300E947F6 /* APIkeys.swift in Sources */,
 				69AADFF026015CAD005C81EA /* AppDelegate.swift in Sources */,
 				69AADFF226015CAD005C81EA /* SceneDelegate.swift in Sources */,
 			);
