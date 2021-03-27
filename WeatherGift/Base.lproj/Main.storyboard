@@ -93,15 +93,74 @@
                                     <constraint firstAttribute="height" constant="225" id="QFH-D5-zN1"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-5Z-HD5">
+                                <rect key="frame" x="0.0" y="225" width="320" height="299"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="80" id="xXQ-HN-Hnu" customClass="DailyTableViewCell" customModule="WeatherGift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xXQ-HN-Hnu" id="Vl8-oU-qFD">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="vco-YG-TzZ">
+                                                    <rect key="frame" x="16" y="5" width="70" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bloomsday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DO-Cj-bea">
+                                                    <rect key="frame" x="94" y="5" width="170" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="188°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9r-lE-uJU">
+                                                    <rect key="frame" x="246" y="5" width="58" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Rain, rain go away. Come back another day!" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cem-i7-rdl">
+                                                    <rect key="frame" x="89" y="31" width="175" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-88°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdo-ea-p8a">
+                                                    <rect key="frame" x="246" y="31" width="58" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dailyHighLabel" destination="w9r-lE-uJU" id="dke-6D-Xy2"/>
+                                            <outlet property="dailyImageView" destination="vco-YG-TzZ" id="G0N-SN-3Rx"/>
+                                            <outlet property="dailyLowLabel" destination="gdo-ea-p8a" id="QF2-Qd-OAG"/>
+                                            <outlet property="dailySummaryView" destination="Cem-i7-rdl" id="cX3-BT-GgL"/>
+                                            <outlet property="dailyWeekdayLabel" destination="9DO-Cj-bea" id="Ssg-tJ-aGm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jgL-4Q-EP1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="faG-GZ-tn9" firstAttribute="top" secondItem="lUz-5Z-HD5" secondAttribute="bottom" id="Cty-hg-yAd"/>
                             <constraint firstItem="3kk-Lw-38v" firstAttribute="leading" secondItem="jgL-4Q-EP1" secondAttribute="leading" id="PJs-8b-73u"/>
                             <constraint firstItem="3kk-Lw-38v" firstAttribute="top" secondItem="jgL-4Q-EP1" secondAttribute="top" id="b56-kS-1jy"/>
                             <constraint firstItem="faG-GZ-tn9" firstAttribute="leading" secondItem="jgL-4Q-EP1" secondAttribute="leading" id="hRd-Wf-gnN"/>
                             <constraint firstItem="jgL-4Q-EP1" firstAttribute="trailing" secondItem="3kk-Lw-38v" secondAttribute="trailing" id="sLY-hc-3b8"/>
                             <constraint firstItem="faG-GZ-tn9" firstAttribute="trailing" secondItem="jgL-4Q-EP1" secondAttribute="trailing" id="tdo-dk-MLK"/>
+                            <constraint firstItem="jgL-4Q-EP1" firstAttribute="trailing" secondItem="lUz-5Z-HD5" secondAttribute="trailing" id="tj1-cX-oCh"/>
+                            <constraint firstItem="lUz-5Z-HD5" firstAttribute="top" secondItem="3kk-Lw-38v" secondAttribute="bottom" id="wKq-FZ-faf"/>
+                            <constraint firstItem="lUz-5Z-HD5" firstAttribute="leading" secondItem="jgL-4Q-EP1" secondAttribute="leading" id="wW5-Xm-LNe"/>
                             <constraint firstItem="faG-GZ-tn9" firstAttribute="bottom" secondItem="jgL-4Q-EP1" secondAttribute="bottom" id="xjm-44-jaK"/>
                         </constraints>
                     </view>
@@ -111,6 +170,7 @@
                         <outlet property="pageControl" destination="fZj-f1-4Af" id="RpG-g0-bb1"/>
                         <outlet property="placeLabel" destination="Kjj-zP-46c" id="DfT-EB-IFH"/>
                         <outlet property="summaryLabel" destination="unJ-Nj-fiL" id="PYq-YI-Fmv"/>
+                        <outlet property="tableView" destination="lUz-5Z-HD5" id="dvZ-lA-tJ8"/>
                         <outlet property="temperatureLabel" destination="4oP-k4-Npv" id="29D-1e-Hhk"/>
                     </connections>
                 </viewController>
@@ -205,6 +265,10 @@
     </scenes>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="rain" width="2592" height="4608"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
