@@ -28,6 +28,10 @@ class LocationDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         clearUserInterface()
         
         tableView.delegate = self
@@ -38,6 +42,7 @@ class LocationDetailViewController: UIViewController {
         updateUserInterface()
     }
     
+    
     func clearUserInterface() {
         dateLabel.text = ""
         placeLabel.text = ""
@@ -45,19 +50,19 @@ class LocationDetailViewController: UIViewController {
         summaryLabel.text = ""
         imageView.image = UIImage()
     }
-
+    
     
     func updateUserInterface() {
         let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
         let weatherLocation = pageViewController.weatherLocations[locationIndex]
         weatherDetail = WeatherDetail(name: weatherLocation.name, latitude: weatherLocation.latitude, longitude: weatherLocation.longitude)
         
-
+        
         
         pageControl.numberOfPages = pageViewController.weatherLocations.count
         pageControl.currentPage = locationIndex
         
-    
+        
         
         weatherDetail.getData {
             DispatchQueue.main.async {
